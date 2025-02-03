@@ -1,0 +1,6 @@
+.drink-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* Optioneel, om wat ruimte tussen de items te geven */
+}
