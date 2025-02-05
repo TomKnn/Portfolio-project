@@ -1,13 +1,12 @@
-import { DrinkItem } from "./DrinkItem";
-import "./DrinkList.css"; // Voeg dit toe bovenaan in DrinkList.jsx
+import DrinkItem from "./DrinkItem";
 
-export const DrinkList = ({ drinks }) => {
+export const DrinkList = ({ drinks, clickFn }) => {
   return (
-    <>
+    <div className="drink-list">
       {drinks.map((drink) => (
-        <DrinkItem key={drink.id} drink={drink} />
+        <DrinkItem key={drink.id} drink={drink} clickFn={clickFn} />
       ))}
-    </>
+    </div>
   );
 };
 
