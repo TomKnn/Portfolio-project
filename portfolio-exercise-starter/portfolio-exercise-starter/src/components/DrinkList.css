@@ -1,7 +1,8 @@
 .drink-list {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Dit zorgt voor centreren langs de cross-as (horizontaal in dit geval) */
-  justify-content: center; /* Dit zorgt ervoor dat de items langs de hoofdas (verticaal) gecentreerd worden */
-  gap: 1rem; /* Optioneel, om wat ruimte tussen de items te geven */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
