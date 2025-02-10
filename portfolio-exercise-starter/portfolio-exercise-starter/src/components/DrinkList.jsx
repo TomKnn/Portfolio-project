@@ -1,13 +1,12 @@
-import DrinkItem from "./DrinkItem";
+import { Flex } from "@chakra-ui/react";
+import { DrinkItem } from "./DrinkItem";
 
 export const DrinkList = ({ drinks, clickFn }) => {
   return (
-    <div className="drink-list">
+    <Flex gap={16} w="50%" flexWrap="wrap" justify={"center"}>
       {drinks.map((drink) => (
         <DrinkItem key={drink.id} drink={drink} clickFn={clickFn} />
       ))}
-    </div>
+    </Flex>
   );
 };
-
-export default DrinkList;

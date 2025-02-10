@@ -1,32 +1,27 @@
+import { Center, Heading } from "@chakra-ui/react";
 import { useState } from "react";
-import "./App.css";
 import { DrinkChoice } from "./components/DrinkChoice";
 import { DrinkSearch } from "./components/DrinkSearch";
-import { availableDrinks } from "./utils/data";
 
 export const App = () => {
-  const [userDrink, setUserDrink] = useState(null);
+  const [userDrink, setUserDrink] = useState();
 
   const greeting = "Welcome to our cafe!";
 
   return (
-    <div className="App">
+    <Center h="100vh" flexDir="column">
       {userDrink ? (
-        <>
-          <DrinkChoice drink={userDrink} clickFn={setUserDrink} />
-          <button onClick={() => setUserDrink(null)}>Reset keuze</button>{" "}
-          {/* Resetknop toegevoegd */}
-        </>
+        <DrinkChoice drink={userDrink} clickFn={setUserDrink} />
       ) : (
         <>
-          <h1>{greeting}</h1>
-          <DrinkSearch drinks={availableDrinks} clickFn={setUserDrink} />
+          <Heading size="2xl" mb={8} color="blue.200">
+            {greeting}
+          </Heading>
+          <DrinkSearch clickFn={setUserDrink} />
         </>
       )}
-    </div>
+    </Center>
   );
 };
-
-export default App;
 
 //cd "C:\Visual Studio\Portfolio Project\portfolio-exercise-starter\portfolio-exercise-starter"

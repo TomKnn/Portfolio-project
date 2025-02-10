@@ -1,6 +1,6 @@
-import { DrinkItem } from "./DrinkItem";
+import DrinkItem from "./DrinkItem";
 
-export const DrinkItems = ({ drinks, onClick }) => {
+const DrinkItems = ({ drinks, onClick }) => {
   return (
     <>
       {drinks.map((drink) => (
@@ -9,3 +9,5 @@ export const DrinkItems = ({ drinks, onClick }) => {
     </>
   );
 };
+
+export default DrinkItems;
