@@ -11,17 +11,16 @@ export const App = () => {
   return (
     <Center h="100vh" flexDir="column">
       {userDrink ? (
-        <DrinkChoice drink={userDrink} clickFn={setUserDrink} />
+        <DrinkChoice drink={userDrink} onClick={setUserDrink} />
       ) : (
         <>
           <Heading size="2xl" mb={8} color="blue.200">
             {greeting}
           </Heading>
-          <DrinkSearch clickFn={setUserDrink} />
+          <DrinkSearch onClick={setUserDrink} />
         </>
       )}
     </Center>
   );
 };
-
 //cd "C:\Visual Studio\Portfolio Project\portfolio-exercise-starter\portfolio-exercise-starter"

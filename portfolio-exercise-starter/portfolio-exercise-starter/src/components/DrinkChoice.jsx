@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "./ui/Button";
 
-export const DrinkChoice = ({ drink, clickFn }) => {
+export const DrinkChoice = ({ drink, onClick }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -35,20 +35,25 @@ export const DrinkChoice = ({ drink, clickFn }) => {
         <Button onClick={onOpen} mr={4}>
           Confirm order
         </Button>
-        <Button onClick={() => clickFn()} variant="ghost">
+        <Button onClick={() => onClick()} variant="ghost">
           Change selection
         </Button>
       </Flex>
 
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal size={["full", "md"]} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Confirm your order</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
+          <ModalBody
+            height={["full", "fit-content"]}
+            display="flex"
+            justifyContent="center"
+            alignItems={["center", "flex-start"]}
+            flexDir="column"
+          >
             <Text>1x {drink.name}</Text>
           </ModalBody>
-
           <ModalFooter>
             <Button colorScheme="teal" mr={4}>
               Confirm
