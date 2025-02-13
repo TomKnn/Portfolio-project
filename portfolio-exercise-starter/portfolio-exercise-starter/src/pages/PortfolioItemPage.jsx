@@ -9,7 +9,7 @@ import {
   Flex,
   Button,
 } from "@chakra-ui/react";
-import { Tag } from "../components/ui/PortfolioItemPage";
+import { Tag } from "@chakra-ui/react";
 
 export const PortfolioItemPage = ({ item, clickFn }) => {
   return (

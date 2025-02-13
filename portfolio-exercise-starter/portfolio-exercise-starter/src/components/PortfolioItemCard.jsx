@@ -7,7 +7,7 @@ import {
   Text,
   Flex,
 } from "@chakra-ui/react";
-import { Tag } from "./ui/PortfolioItemPage";
+import { Tag } from "@chakra-ui/react";
 
 export const PortfolioItemCard = ({ item, clickFn }) => {
   return (
